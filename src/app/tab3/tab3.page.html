@@ -1,0 +1,49 @@
+<link href="https://fonts.cdnfonts.com/css/tw-cen-mt-std" rel="stylesheet">
+
+<ion-toolbar>
+  <ion-title class="centered-title">
+    Ajustes
+  </ion-title>
+</ion-toolbar>
+
+<ion-content [fullscreen]="true">
+
+
+  <ion-card class="haceresCard" (click)="navigateToQRPage()">
+    <ion-router-link routerLink="/qr-page">
+      <div class="card-content">
+        <div class="icon-title-container">
+          <ion-icon name="qr-code-outline"></ion-icon>
+          <ion-title size="large">Generar QR</ion-title>
+        </div>
+      </div>
+    </ion-router-link>
+  </ion-card>
+
+  <ion-card class="haceresCard">
+    <div class="card-content">
+      <div class="icon-title-container">
+        <ion-icon name="moon"></ion-icon>
+        <ion-title size="large">Cambiar Tema</ion-title>
+      </div>
+    </div>
+  </ion-card>
+
+  <ion-card class="haceresCard">
+    <div class="card-content">
+      <div class="icon-title-container">
+        <ion-icon name="lock-closed"></ion-icon>
+        <ion-title size="large">Cerrar Sesion</ion-title>
+      </div>
+    </div>
+  </ion-card>
+
+
+
+
+  
+</ion-content>
+
+    
+    
+    

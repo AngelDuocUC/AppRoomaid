@@ -1,0 +1,46 @@
+ion-toolbar,
+ion-content {
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-title {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+}
+
+.centered-title {
+    text-align: center;
+    /* Centrar horizontalmente el texto */
+    width: 100%;
+    /* Hacer que el título ocupe el ancho completo del elemento padre */
+}
+
+/* Cards */
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+ion-icon {
+    font-size: 24px;
+    /* Tamaño del icono ajustable según tus preferencias */
+}
+
+.haceresCard {
+
+    --background: #FFFFFF;
+    --color: #7085FF;
+    padding: 6px;
+
+}

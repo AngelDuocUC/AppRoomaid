@@ -1,0 +1,200 @@
+ion-toolbar,
+ion-content {
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-title.tituloprincipal {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+ion-title {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}
+
+.ellipsis-col {
+    margin-left: 100px;
+}
+
+
+
+.home-icon {
+    font-size: 100px;
+    margin-right: 10px;
+    border: 2px solid #7085FF;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+
+.logo-container {
+    flex: 0 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 200px;
+    height: 100px;
+}
+
+
+ion-card-title {
+    font-size: 20px;
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    color: #7085FF;
+    text-align: left;
+
+}
+
+
+
+/* Cards */
+
+.hogarCard {
+    padding: 10px;
+}
+
+.hogarCard2 {
+    padding: 10px;
+}
+
+ion-thumbnail {
+    width: 100px;
+    height: 100px;
+    border-radius: 5%;
+    overflow: hidden;
+}
+
+ion-thumbnail img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 24px;
+    margin-right: 2px;
+}
+
+.custom-button {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    max-width: 150px;
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    --background: #FFFFFF;
+    --color: #7085FF;
+    padding: 6 6px;
+
+}
+
+ion-card {
+    --background: #BFCAEE;
+    --color: #7085FF;
+}
+
+
+
+
+.haceresCard {
+
+    --background: #FFFFFF;
+    --color: #7085FF;
+
+}
+
+ion-avatar {
+    width: 25px;
+    /* Ajusta el ancho del avatar según sea necesario */
+    height: 25px;
+
+}
+
+
+
+
+.logo {
+
+    display: flex;
+    justify-content: flex-end;
+    /* Mueve el logotipo hacia la derecha */
+    align-items: center;
+    /* Alinea verticalmente el logotipo con los otros elementos */
+}
+
+.avatar1 img {
+    border: 2px solid #7085FF;
+    /* Añade un borde rojo de 2px alrededor del logo */
+}
+
+.avatar2 img {
+    border: 2px solid #E36F5C;
+    /* Añade un borde rojo de 2px alrededor del logo */
+}
+
+.avatar3 img {
+    border: 2px solid #34AD7F;
+    /* Añade un borde rojo de 2px alrededor del logo */
+}
+
+ion-toolbar,
+ion-content {
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-title.tituloprincipal {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+ion-card-title {
+    font-size: 20px;
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    color: #7085FF;
+    text-align: left;
+
+}
+
+ion-card {
+    --background: #BFCAEE;
+    --color: #7085FF;
+}
+
+ion-col {
+    flex: 1;
+
+    font-family: 'Tw Cen MT Std', sans-serif;
+}
+
+
+img {
+    border: 2px solid #7085FF;
+    border-radius: 10px;
+
+}
+
+.drops {
+
+    --color: #7085FF;
+}
+
+
+.custom-bar {
+    --background: #FFFFFF;
+}

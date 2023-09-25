@@ -1,0 +1,122 @@
+ion-toolbar,
+ion-content {
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-title {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+}
+
+.tituloprincipal {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+
+.card-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.avatar-container {
+    position: relative;
+}
+
+ion-avatar.custom-avatar {
+    width: 50px;
+    height: 50px;
+    right: -10px;
+    top: 0;
+}
+
+ion-avatar {
+    width: 25px;
+    height: 25px;
+
+}
+
+/* Cards */
+
+.card-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon-title-container {
+    display: flex;
+    align-items: center;
+}
+
+ion-icon {
+    font-size: 24px;
+    margin-right: 2px;
+}
+
+.custom-button {
+    font-size: 12px;
+    font-family: Arial, sans-serif;
+    max-width: 150px;
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    --background: #FFFFFF;
+    --color: #7085FF;
+    padding: 6 6px;
+
+}
+
+ion-card {
+    --background: #BFCAEE;
+    --color: #7085FF;
+}
+
+.tareasCard {
+
+    --background: #FFFFFF;
+    --color: #7085FF;
+
+}
+
+
+
+ion-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+
+
+ion-col {
+    flex: 1;
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+}
+
+h1 {
+    font-size: 1rem;
+    margin: 0;
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    color: #7085FF;
+}
+
+
+.avatar1 img {
+    border: 2px solid #7085FF;
+    /* Añade un borde rojo de 2px alrededor del logo */
+}
+
+.avatar2 img {
+    border: 2px solid #E36F5C;
+    /* Añade un borde rojo de 2px alrededor del logo */
+}
+
+.avatar3 img {
+    border: 2px solid #34AD7F;
+    /* Añade un borde rojo de 2px alrededor del logo */
+}
