@@ -1,6 +1,7 @@
 
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage';
+import { Router } from '@angular/router';
 
 
 
@@ -13,7 +14,7 @@ export class RegisterPage implements OnInit {
   nombre: string = '';
   contrasena: string = '';
 
-  constructor(private storage: Storage) {}
+  constructor(private storage: Storage,private router: Router) {}
 
   async guardarRegistro() {
     console.log('Nombre:', this.nombre);
@@ -41,8 +42,12 @@ export class RegisterPage implements OnInit {
 
     console.log('Usuario creado y guardado en el Local Storage');
     console.log('Usuarios en el Local Storage:', usuarios);
-      
+    this.router.navigate(['/login'])
   }
   ngOnInit() {
+  }
+
+  navigateToLogin() {
+    this.router.navigate(['/login'])
   }
 }
