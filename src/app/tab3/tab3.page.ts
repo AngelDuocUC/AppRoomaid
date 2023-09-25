@@ -13,5 +13,7 @@ export class Tab3Page {
     this.router.navigate(['/qr-page']);
   }
 
-
+  navigateToLogin() {
+    this.router.navigate(['/login'])
+  }
 }
