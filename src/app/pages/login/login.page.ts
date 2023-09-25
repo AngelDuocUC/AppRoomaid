@@ -24,13 +24,7 @@ export class LoginPage implements OnInit {
   }
 
   ngOnInit() {
-    // Verificar si el usuario ya está autenticado (por ejemplo, mediante un servicio de autenticación)
-    const usuarioAutenticado = true; // Reemplaza esto con tu lógica de autenticación
 
-    if (usuarioAutenticado) {
-      console.log('usuario autenticado ');
-      this.router.navigate(['/tabs']);
-    }
   }
 
   iniciarSesion() {
