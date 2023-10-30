@@ -1,0 +1,131 @@
+
+
+<ion-content [fullscreen]="true">
+
+  <ion-toolbar>
+    <ion-title>
+      <div class="tituloprincipal">
+        <img src="../assets/icon/logo_morado.png" alt="Logo de la Aplicación" />
+      </div>
+      <div class="title-text">
+        Facil y Comodo
+      </div>
+    </ion-title>
+  </ion-toolbar>
+  
+
+<swiper-container
+(slidechange)="swiperSlideChanged($event)"
+[pagination] = "true"
+  >
+  <swiper-slide>
+
+    <ion-card>
+       
+      <img src="../assets/icon/Tuto_1.png" alt="Logo de la Aplicación" />
+ 
+      <ion-card-header>
+        <ion-card-title>Gracias por Descargar Roomaids</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        Utilizar Roomaids es facil y sencillo solo tienes que seguir estos simples pasos.
+      </ion-card-content>
+    </ion-card>  
+
+  </swiper-slide>
+
+  <swiper-slide>
+    <ion-card>
+       
+      <img src="../assets/icon/Tuto_2.png" alt="Logo de la Aplicación" />
+ 
+      <ion-card-header>
+        <ion-card-title>Registra tu Cuenta</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        Registrate en Roomaids con tus datos para poder facilitarte una mejor experiencia.
+      </ion-card-content>
+    </ion-card>
+  </swiper-slide>
+  <swiper-slide>
+    <ion-card>
+       
+      <img src="../assets/icon/Tuto_3.png" alt="Logo de la Aplicación" />
+ 
+      <ion-card-header>
+        <ion-card-title>Crea tu Hogar</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        Crea y Configura tu Hogar como deseas para poder organizar mejor a tus Roomies
+      </ion-card-content>
+    </ion-card>
+    
+  </swiper-slide>
+  <swiper-slide>
+    <ion-card>
+       
+      <img src="../assets/icon/Tuto_4.png" alt="Logo de la Aplicación" />
+ 
+      <ion-card-header>
+        <ion-card-title>Genera tu QR</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        Para invitar a tus Roomies a tu hogar solo tienes que mostrartles tu codigo QR.
+      </ion-card-content>
+    </ion-card>
+  </swiper-slide>
+  <swiper-slide>
+    <ion-card>
+       
+      <img src="../assets/icon/Tuto_5.png" alt="Logo de la Aplicación" />
+ 
+      <ion-card-header>
+        <ion-card-title>Escanea tu QR</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        Unete al Hogar de tus Roomies con solo escanear el codigo QR
+      </ion-card-content>
+    </ion-card>
+  </swiper-slide>
+
+
+  <swiper-slide>
+    <ion-card (click)="goToRegister()">
+       
+      <img src="../assets/icon/Tuto_6.png" alt="Logo de la Aplicación" />
+ 
+      <ion-card-header>
+        <ion-card-title>¡Bienvenid@s Roomies!</ion-card-title>
+        
+      </ion-card-header>
+    
+      <ion-card-content>
+        ¡Y ya esta! Ahora tus Roomies son parte de tu Hogar
+      </ion-card-content>
+
+    </ion-card>
+    
+  </swiper-slide>
+</swiper-container>
+
+
+
+
+ 
+
+
+
+
+
+
+</ion-content>
