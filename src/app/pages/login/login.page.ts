@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { Storage } from '@ionic/storage-angular';
 import { Router } from '@angular/router';
+import {
+  FormGroup,
+  FormControl,
+  Validators
+} from '@angular/forms';
+import { AlertController } from '@ionic/angular';
 
 
 
@@ -10,43 +16,63 @@ import { Router } from '@angular/router';
   styleUrls: ['./login.page.scss'],
 })
 export class LoginPage implements OnInit {
+  formularioLogin: FormGroup;
 
-  nombre: string = '';
-  contrasena: string = '';
-
-  constructor(private storage: Storage , private router: Router) {
-    this.initStorage();
-  }
-
-  async initStorage() {
-    await this.storage.create(); // Crear la base de datos si no existe
-    console.log('Base de datos creada');
+  constructor(private router: Router, public alertContrller: AlertController) {
+    this.formularioLogin = new FormGroup({
+      nombre: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+    });
   }
 
   ngOnInit() {
-
   }
 
-  iniciarSesion() {
-    // Obtener la lista de usuarios registrados desde el almacenamiento local
-    this.storage.get('usuarios').then((usuarios: any[]) => {
-      if (usuarios) {
-        // Buscar un usuario con el correo y contraseña ingresados
-        const usuario = usuarios.find((usuario) => usuario.nombre === this.nombre && usuario.contrasena === this.contrasena);
+  async validarCredenciales() {
+    var f = this.formularioLogin.value;
 
-        if (usuario) {
-          console.log('Inicio de sesión exitoso');
-          this.router.navigate(['/tabs']);
-          
-        } else {
-          console.log('Credenciales incorrectas');
-          // Mostrar un mensaje de error o tomar otras medidas apropiadas
-        }
+    // Obtener usuarios registrados del localStorage o inicializar un array vacío
+    const usuarios = JSON.parse(localStorage.getItem('usuarios') || '[]');
+
+    // Buscar un usuario con el nombre ingresado en el formulario
+    const usuario = usuarios.find((u: any) => u.nombre === f.nombre);
+
+    if (usuario) {
+      // Usuario encontrado, verificar contraseña
+      if (usuario.password === f.password && usuario.nombre === f.nombre) {
+        // Credenciales válidas, permitir el inicio de sesión
+        localStorage.setItem("ingresado", "true");
+        const alert = await this.alertContrller.create({
+          header: "Usuario",
+          message: `Bienvenido a Roomaid ${usuario.nombre}`,
+          buttons:[
+            {
+              text: 'OK',
+              handler: () => {
+                this.router.navigate(['/tabs/home']);
+              }
+            }
+          ]
+        });
+        await alert.present();
       } else {
-        console.log('No hay usuarios registrados');
-        // Mostrar un mensaje de que no hay usuarios registrados
+        // Contraseña incorrecta, mostrar mensaje de error
+        const alert = await this.alertContrller.create({
+          header: "Usuario",
+          message: `Contraseña incorrecta `,
+          buttons: ["OK"]
+        });
+        await alert.present();
       }
-    });
+    } else {
+      // Usuario no encontrado, mostrar mensaje de error
+      const alert = await this.alertContrller.create({
+        header: "Usuario",
+        message: "Usuario no registrado",
+        buttons: ["OK"]
+      });
+      await alert.present();
+    }
   }
 
   navigateToRegister() {

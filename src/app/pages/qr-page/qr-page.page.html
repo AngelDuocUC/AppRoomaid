@@ -2,19 +2,29 @@
 
 
 <ion-toolbar>
+  <ion-icon name="arrow-back-outline" (click)="navigateTohome()"></ion-icon>
   <ion-title class="tituloprincipal">
     Unete a
   </ion-title>
 </ion-toolbar>
 
-<ion-content [fullscreen]="true">
+<ion-content>
 
   <ion-title>
     <div class="logo-container">
-      <img src="../assets/icon/logo_morado.png" alt="Logo de la Aplicación" />
+      <img src="../assets/icon/logo_morado.png" alt="Logo Roomaid" />
     </div>
     <div class="qr-container">
-      <img src="../assets/icon/qr_simulator.png" alt="Logo de la Aplicación" />
+      <qrcode [qrdata]="qrString" 
+              [width]="300" 
+              [errorCorrectionLevel]="'H'"
+              [colorDark]="'#7085FF'"
+              [colorLight]="'#E7EDFF'"
+              [imageSrc]="'../../../assets/icon/favicon.png'"
+              [imageHeight]="55"
+              [imageWidth]="55"
+        >
+      </qrcode>
     </div>
 
   </ion-title>
