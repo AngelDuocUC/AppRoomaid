@@ -10,14 +10,25 @@
   <ion-list>
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
+      <form [formGroup]="formularioRegistro">
+       <ion-input formControlName="nombre" placeholder="Ingrese usuario" ></ion-input> 
+        </form>
     </ion-item>
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" required></ion-input>
+      <form [formGroup]="formularioRegistro">
+        <ion-input formControlName="password" type="password"  placeholder="Ingrese Contraseña"></ion-input>
+      </form>
+    </ion-item>
+    <ion-item>
+      <ion-label position="floating">Confirmar Contraseña</ion-label>
+      <form [formGroup]="formularioRegistro">
+      <ion-input formControlName="confirmacionPassword" type="password"  placeholder="Confirme Contraseña"></ion-input>
+    </form>
     </ion-item>
   </ion-list>
   <ion-button class="botonguardar" expand="full" (click)="guardarRegistro()">Guardar</ion-button>
   <p  (click)="navigateToLogin()" >¿tienes una cuenta? Inicia Sesion.</p> 
 </ion-content>
+
 

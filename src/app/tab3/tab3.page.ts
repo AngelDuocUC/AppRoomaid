@@ -14,6 +14,11 @@ export class Tab3Page {
   }
 
   navigateToLogin() {
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
+  }
+
+  async logout() {
+    localStorage.removeItem('ingresado');
+    this.router.navigate(['/login']);
   }
 }

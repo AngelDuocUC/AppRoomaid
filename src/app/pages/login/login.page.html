@@ -8,16 +8,22 @@
 
 <ion-content>
   <ion-list>
+
     <ion-item>
       <ion-label position="floating">Nombre</ion-label>
-      <ion-input [(ngModel)]="nombre" name="nombre" required></ion-input>
+      <form [formGroup]="formularioLogin">    
+        <ion-input formControlName="nombre"  placeholder="Ingrese usuario" value="Default value"></ion-input>  
+      </form>
     </ion-item>
+
     <ion-item>
       <ion-label position="floating">Contraseña</ion-label>
-      <ion-input [(ngModel)]="contrasena" name="contrasena" type="password" required></ion-input>
+      <form [formGroup]="formularioLogin">
+        <ion-input formControlName="password" type="password"  placeholder="Ingrese contraseña" value="Default value"></ion-input>
+      </form>
     </ion-item>
   </ion-list>
-  <ion-button expand="full" (click)="iniciarSesion()">Iniciar Sesión</ion-button>
+  <ion-button expand="full" (click)="validarCredenciales() ">Iniciar Sesión</ion-button>
   <p (click)="navigateToRegister()">¿no tienes una cuenta? Registrate.</p> 
 </ion-content>
 
