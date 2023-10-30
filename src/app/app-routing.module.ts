@@ -38,6 +38,20 @@ const routes: Routes = [
     path: 'tasks',
     loadChildren: () => import('./pages/tasks/tasks.module').then( m => m.TasksPageModule),
     canActivate:[LoggedGuard]
+  },{
+    path: 'splash',
+    loadChildren: () => import('./splash/splash.module').then( m => m.SplashPageModule)
+    canActivate:[NoLogGuard]
+  },
+  {
+    path: 'tutorial',
+    loadChildren: () => import('./tutorial/tutorial.module').then( m => m.TutorialPageModule)
+    canActivate:[NoLogGuard]
+  },
+  {
+    path: 'chat',
+    loadChildren: () => import('./chat/chat.module').then( m => m.ChatPageModule)
+    canActivate:[LoggedGuard]
   },
   
 ];
@@ -48,3 +62,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule {}
+

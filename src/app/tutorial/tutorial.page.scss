@@ -1,0 +1,60 @@
+ion-toolbar,ion-content {
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-toolbar{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+
+ion-title {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    text-align: center;
+    
+}
+
+ion-title.tituloprincipal {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+swiper-container {
+    width: 350px;
+    height: 550px;
+    --swiper-pagination-bullet-inactive-color: var(--ion-color-step-200, #cccccc);
+    --swiper-pagination-color: #7085FF;
+    
+
+}
+
+swiper-slide {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+ion-card{
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-card-title{
+    font-family: 'Tw Cen MT Std', sans-serif;
+    color: #7085FF;
+    font-weight: 600;
+    text-align: center;
+}
+
+ion-card-content{
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 900;
+    text-align: center;
+
+}
