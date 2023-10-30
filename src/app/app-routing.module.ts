@@ -7,7 +7,7 @@ import { NoLogGuard } from './noLog.guard';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'login',
+    redirectTo: 'splash',
     pathMatch: 'full'
   },
   {

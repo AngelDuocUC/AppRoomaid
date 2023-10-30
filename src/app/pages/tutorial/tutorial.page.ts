@@ -12,7 +12,7 @@ export class TutorialPage implements OnInit {
   constructor(private router: Router) {}
 
   goToRegister() {
-    this.router.navigate(['/register']);
+    this.router.navigate(['/login']);
   }
 
   swiperSlideChanged(e:any){
