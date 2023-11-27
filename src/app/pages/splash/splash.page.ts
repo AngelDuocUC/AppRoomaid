@@ -10,10 +10,19 @@ export class SplashPage implements OnInit {
 
   constructor(private router:Router) { }
 
+
+
   ngOnInit() {
-    setTimeout(() => {
+    if(localStorage.getItem("ingresado")){
+      setTimeout(() => {
+      this.router.navigateByUrl('/tabs/home')
+      }, 3500);
+      
+    } else{
+      setTimeout(() => {
       this.router.navigateByUrl('/tutorial')
-    }, 3500);
+      }, 3500);
+    }
   }
 }
 
