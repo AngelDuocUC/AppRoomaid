@@ -43,7 +43,6 @@ const routes: Routes = [
   },{
     path: 'splash',
     loadChildren: () => import('./pages/splash/splash.module').then( m => m.SplashPageModule),
-    canActivate:[NoLogGuard]
   },
   {
     path: 'tutorial',
