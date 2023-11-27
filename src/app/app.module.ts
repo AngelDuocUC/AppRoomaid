@@ -8,10 +8,25 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
 
+//firebase
+import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from 'src/environments/environment'
+
+import { GiphyService } from './giphy.service';
+
+import { HttpClientModule } from '@angular/common/http';
+
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, IonicModule.forRoot(), IonicStorageModule.forRoot(),AppRoutingModule],
-  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
+  imports: [
+    BrowserModule,
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    HttpClientModule],
+    
+  providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy},GiphyService],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule { }

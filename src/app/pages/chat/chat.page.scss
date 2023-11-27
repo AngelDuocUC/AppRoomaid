@@ -1,0 +1,17 @@
+ion-toolbar,
+ion-content {
+    --background: #E7EDFF;
+    --color: #7085FF;
+}
+
+ion-title.tituloprincipal {
+    text-align: center;
+    font-size: 1.5rem;
+    width: 100%;
+}
+
+ion-title {
+    font-family: 'Tw Cen MT Std', sans-serif;
+    font-weight: 600;
+    text-align: left;
+}

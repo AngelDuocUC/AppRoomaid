@@ -16,4 +16,11 @@ export class TasksPage implements OnInit {
   navigateTohome() {
     this.router.navigate(['tabs/home'])
   }
+
+  goToChat() {
+    this.router.navigate(['/chat'])
+  }
+  goToNewChat() {
+    this.router.navigate(['/newchat'])
+  }
 }
