@@ -36,35 +36,56 @@ export class QrPagePage implements OnDestroy {
 }
 
   async startScan() {
-    try {
-      const permission = await this.checkPermission();
-      if(!permission) {
-        return;
-      }
+  try {
+    const permission = await this.checkPermission();
+    if (!permission) {
+      return;
+    }
+
+    const bodyElement = document.querySelector('body');
+
+    if (bodyElement) {
       await BarcodeScanner.hideBackground();
-      // document.querySelector('body').classList.add('scanner-active');
-      // this.content_visibility = 'hidden';
+      bodyElement.classList.add('scanner-active');
+      this.content_visibility = 'hidden';
+
       const result = await BarcodeScanner.startScan();
       console.log(result);
+
       BarcodeScanner.showBackground();
-      // document.querySelector('body').classList.remove('scanner-active');
-      // this.content_visibility = '';
-      if(result?.hasContent) {
+      bodyElement.classList.remove('scanner-active');
+      this.content_visibility = '';
+
+      if (result?.hasContent) {
         this.scannedResult = result.content;
         console.log(this.scannedResult);
       }
-    } catch(e) {
-      console.log(e);
-      this.stopScan();
+    } else {
+      console.error("Body element not found");
     }
+  } catch (e) {
+    console.log(e);
+    this.stopScan();
   }
+}
+
 
   stopScan() {
-    BarcodeScanner.showBackground();
-    BarcodeScanner.stopScan();
-    // document.querySelector('body').classList.remove('scanner-active');
-    this.content_visibility = '';
+  BarcodeScanner.showBackground();
+  BarcodeScanner.stopScan();
+
+  const bodyElement = document.querySelector('body');
+
+  if (bodyElement) {
+    // Verifique se bodyElement não é nulo antes de manipular
+    bodyElement.classList.remove('scanner-active');
+  } else {
+    // Caso o elemento body seja nulo, manipule de acordo com a sua lógica de erro
+    console.error("Body element not found");
   }
+
+  this.content_visibility = '';
+}
 
   ngOnDestroy(): void {
       this.stopScan();
